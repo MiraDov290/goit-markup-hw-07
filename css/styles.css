@@ -88,6 +88,26 @@ button {
     overflow: hidden;
 }
 
+@media screen and (min-width: 480px) {
+    .container {
+        margin: 0 auto;
+        max-width: 428px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 15px;
+        max-width: 1158px;
+    }
+}
+
 /* HEADER */
 
 .page-heade {
@@ -104,6 +124,19 @@ button {
     justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+    .page-heade-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .page-heade-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .page-navigation,
 .our-list,
 .media-list {
@@ -113,6 +146,33 @@ button {
 .page-navigation {
     display: flex;
     align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+    .page-navigation {
+        margin-left: 76px;
+    }
+
+    .address-list {
+        margin-left: auto;
+    }
+
+    .menu-list {
+        display: flex;
+    }
+
+    .contact-mailto {
+        display: block;
+        padding: 24px 0;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+    .contact:not(:last-child) {
+        margin-right: 40px;
+    }
 }
 
 .links {
@@ -214,6 +274,25 @@ button {
 .contact-mailto:hover,
 .contact-mailto:focus {
     color: var(--pressed-state);
+}
+
+@media screen and (min-width: 768px) {
+    .contact-mailto {
+        display: block;
+        padding: 7px 0;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+
+        color: var(--text-color);
+        transition: color var(--transition-dur-and-func);
+    }
+
+    .contact-mailto:hover,
+    .contact-mailto:focus {
+        color: var(--pressed-state);
+    }
 }
 
 /* MOBILE-HEADER */
@@ -389,7 +468,7 @@ button {
 }
 
 
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 480px) {
     .mobile-menu-link {
         font-size: 36px;
     }
@@ -398,7 +477,6 @@ button {
         font-size: 36px;
     }
 }
-
 
 @media screen and (max-width: 384px) {
     .mobile-social-list {
