@@ -21,11 +21,12 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--mains-color);
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    background-color: var(--mains-color);
 }
 
 h1,
@@ -68,11 +69,8 @@ button {
 }
 
 .container {
-    margin: 0 auto;
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
-    outline: 2px solid #7000FF;
+    padding: 0 16px;
+    max-width: 100%;   
 }
 
 .visually-hidden {
@@ -88,7 +86,7 @@ button {
     overflow: hidden;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 428px) {
     .container {
         margin: 0 auto;
         max-width: 428px;
