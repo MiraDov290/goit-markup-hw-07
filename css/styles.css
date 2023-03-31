@@ -702,46 +702,7 @@ button {
     color: var(--text-color);
 }
 
-@media screen and (min-width: 428px) {
-    .team-our {
-        padding: 96px 0;
-    }
 
-    .our-list-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: calc(var(--element-gap) * 3);
-    }
-
-    .emplo-our-item {
-        width: 396px;
-        height: 96px;
-
-    }
-
-    .emplo-our-cart {
-        display: none;
-    }
-
-    .emplo-our {
-        font-size: 36px;
-        line-height: 1.11;
-
-        text-align: center;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-
-        color: var(--modal-color);
-    }
-
-    .text-going {
-        margin-top: 8px;
-
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-    }
-}
 
 
     .emplo-our {
