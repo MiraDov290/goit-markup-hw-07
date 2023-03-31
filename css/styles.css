@@ -139,8 +139,8 @@ button {
     color: var(--blue-color);
 }
 
-.logo-links {
-    color: var(--bth-color);
+.links {
+    color: var(--modal-color);
 }
 
 .menu-list,
@@ -526,6 +526,67 @@ button {
     background-color: var(--pressed-state);
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .hero-list {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/dark_mobile.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-list {
+        max-width: 768px;
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/dark_tablet.jpg);
+    }
+
+    .main-button {
+        max-width: 496px;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+    }
+        
+    .modal-bth {
+        margin-top: 36px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero-list {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/dark_tablet.jpg);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .hero-list {
+        padding: 188px 0;
+        max-width: 1440px;
+
+        background-image: linear-gradient(var(--grey), var(--grey)), url(../images/hero/backgroung-hero-desktop.jpg);
+    }
+    .modal-bth {
+        margin-top: 48px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient(var(--grey), var(--grey)), url(../images/hero/backgroung-hero-desktop-@2x.jpg);
+    }
+}
+
+
 /* MAIN-BTH */
 
 .main-media {
@@ -851,6 +912,11 @@ button {
     text-transform: uppercase;
     color: var(--blue-color);
 }
+
+.logo-links {
+    color: var(--bth-color);
+}
+
 .conclusion {
     width: 264px;
     margin-top: 16px;
