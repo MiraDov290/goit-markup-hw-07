@@ -4,14 +4,14 @@
     --mains-color: #ffffff;
     --text-color: #434455;
     --text-footer: #E7E9FC;
-    --bth-color:#F4F4FD;
+    --bth-color: #F4F4FD;
     --pressed-state: #404BBF;
     --grey-customer: #8E8F99;
     --green-media: #31d0aa;
     --modal-window: #FCFCFC;
     --modal-icon: #000000;
     --text-check: #757575;
-    --element-gap:24px;
+    --element-gap: 24px;
     --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -75,7 +75,7 @@ button {
 
 .container {
     padding: 0 16px;
-    max-width: 100%;   
+    max-width: 100%;
 }
 
 .visually-hidden {
@@ -165,7 +165,7 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
-    
+
     color: var(--modal-color);
     transition: color var(--transition-dur-and-func);
 }
@@ -185,12 +185,12 @@ button {
     display: block;
     width: 100%;
     height: 4px;
-    
+
     background-color: var(--pressed-state);
     position: absolute;
     left: 0;
     bottom: 0;
-    border-radius: 2px; 
+    border-radius: 2px;
 }
 
 
@@ -212,10 +212,11 @@ button {
         color: var(--text-color);
         transition: color var(--transition-dur-and-func);
     }
-        .contact-mailto:is(:hover, :focus) {
-            color: var(--pressed-state);
-        }
+
+    .contact-mailto:is(:hover, :focus) {
+        color: var(--pressed-state);
     }
+}
 
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -230,24 +231,26 @@ button {
         margin-left: 76px;
     }
 
-.address-list {
-    margin-left: auto;
-}
+    .address-list {
+        margin-left: auto;
+    }
 
-.menu-list {
-    display: flex;
-}
-.contact-mailto {
-    display: block;
-    padding: 24px 0;
+    .menu-list {
+        display: flex;
+    }
 
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-}
-.contact:not(:last-child) {
-    margin-right: 40px;
-}
+    .contact-mailto {
+        display: block;
+        padding: 24px 0;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+    .contact:not(:last-child) {
+        margin-right: 40px;
+    }
 }
 
 /* MOBILE-HEADER */
@@ -271,7 +274,7 @@ button {
         background-color: transparent;
         border: none;
         cursor: pointer;
-        
+
     }
 
     .mobile-icon-open {
@@ -365,7 +368,7 @@ button {
         color: var(--pressed-state);
     }
 
-    .mobile-menu-link:hover, 
+    .mobile-menu-link:hover,
     .mobile-menu-link:hover {
         color: var(--pressed-state);
     }
@@ -422,22 +425,22 @@ button {
         background-color: var(--pressed-state);
     }
 
-        .contact-mailto {
-            display: block;
-            padding-top: 24px;
-            padding-bottom: 24px;
-    
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.02em;
-            color: var(--text-color);
-            transition: color var(--transition-dur-and-func);
-        }
-    
-        .contact-mailto:hover,
-        .contact-mailto:focus {
-            color: var(--pressed-state);
-        }
+    .contact-mailto {
+        display: block;
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--text-color);
+        transition: color var(--transition-dur-and-func);
+    }
+
+    .contact-mailto:hover,
+    .contact-mailto:focus {
+        color: var(--pressed-state);
+    }
 }
 
 @media screen and (max-width: 427px) {
@@ -480,7 +483,7 @@ button {
     margin-right: auto;
     margin-left: auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/header_offise.jpg);
+        url(../images/header_offise.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -490,7 +493,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     max-width: 496px;
-    
+
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -517,8 +520,8 @@ button {
     border-radius: 4px;
     border: none;
     transition: background-color var(--transition-dur-and-func),
-    color var(--transition-dur-and-func),
-    border var(--transition-dur-and-func);
+        color var(--transition-dur-and-func),
+        border var(--transition-dur-and-func);
 }
 
 .modal-bth:hover,
@@ -526,44 +529,71 @@ button {
     background-color: var(--pressed-state);
 }
 
-
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
-screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
-screen and (min-resolution: 192dpi) and (max-width: 767px),
-screen and (min-resolution: 2dppx) and (max-width: 767px) {
-    .hero-list {
+@media screen and (min-width: 428px) {
+.hero-list {
         margin-left: auto;
-            margin-right: auto;
-            padding: 112px 0;
-            max-width: 428px;
-            background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        margin-right: auto;
+        padding: 112px 0;
+        max-width: 428px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/dark_mobile.jpg);
     }
 
-        .main-button {
-            margin: 0 auto;
-            max-width: 320px;
-    
-            font-size: 36px;
-            line-height: 1.11;
-            letter-spacing: 0.02em;
-            text-transform: capitalize;
-    
-            color: var(--mains-color);
-        }
-    
-        .modal-bth {
-            margin-top: 72px;
-            padding: 16px 32px;
-        }
+    .main-button {
+        margin: 0 auto;
+        max-width: 320px;
+
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+
+        color: var(--mains-color);
+    }
+
+    .modal-bth {
+        margin-top: 72px;
+        padding: 16px 32px;
+    }
 }
 
+@media screen and (min-width: 768px) {
+    .hero-list {
+        max-width: 768px;
 
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/dark_tablet.jpg);
+    }
 
+    .main-button {
+        max-width: 496px;
 
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+    }
+
+    .modal-bth {
+        margin-top: 36px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-list {
+        padding: 188px 0;
+        max-width: 1440px;
+
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/header_offise.jpg);
+    }
+
+    .order-button {
+        margin-top: 48px;
+    }
+}
 
 
 /* MAIN-BTH */
@@ -663,7 +693,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     height: 64px;
 }
 
-
 .text-going {
     margin-top: 8px;
     font-size: 16px;
@@ -672,6 +701,68 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
     color: var(--text-color);
 }
+
+@media screen and (min-width: 428px) {
+    .team-our {
+        padding: 96px 0;
+    }
+
+    .our-list-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(var(--element-gap) * 3);
+    }
+
+    .emplo-our-item {
+        width: 396px;
+        height: 96px;
+
+    }
+
+    .emplo-our-cart {
+        display: none;
+    }
+
+    .emplo-our {
+        font-size: 36px;
+        line-height: 1.11;
+
+        text-align: center;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+
+        color: var(--modal-color);
+    }
+
+    .text-going {
+        margin-top: 8px;
+
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+}
+
+
+    .emplo-our {
+        margin-top: 8px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+
+
+
+    .emplo-our {
+        margin-top: 8px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
 
 .our-images-team {
     border: 1px solid #e7e9fc;
@@ -725,6 +816,20 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     padding-right: 32px;
     background-color: rgb(77, 90, 229, 0.5);
 }
+
+
+
+        .hero-our {
+            text-align: center;
+    
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+    
+            color: var(--modal-color);
+        }
 
 .employees-card {
     padding: 32px 16px;
@@ -801,6 +906,12 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
 .team-our-going {
     padding-bottom: 120px;
+}
+
+@media screen and (max-width: 1199px) {
+    .team-our-going {
+        display: none;
+    }
 }
 
 .team-our-employee {
