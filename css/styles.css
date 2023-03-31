@@ -125,40 +125,6 @@ button {
     align-items: center;
 }
 
-.page-navigation,
-.our-list,
-.media-list {
-    list-style: none;
-}
-
-.page-navigation {
-    display: flex;
-    align-items: center;
-}
-
-
-    .address-list {
-        margin-left: auto;
-    }
-
-
-    .contact-mailto {
-        display: block;
-        padding: 24px 0;
-
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-    }
-
-    .contact:not(:last-child) {
-        margin-right: 40px;
-    }
-
-.links {
-    color: var(--modal-color);
-}
-
 .logo {
     display: block;
     padding-top: 25px;
@@ -204,6 +170,11 @@ button {
     transition: color var(--transition-dur-and-func);
 }
 
+.menu-link:hover,
+.menu-link:focus {
+    color: var(--pressed-state);
+}
+
 .current {
     position: relative;
     color: var(--pressed-state);
@@ -221,6 +192,7 @@ button {
     bottom: 0;
     border-radius: 2px; 
 }
+
 
 @media screen and (max-width: 767px) {
     .page-heade-container {
@@ -240,6 +212,11 @@ button {
         color: var(--text-color);
         transition: color var(--transition-dur-and-func);
     }
+        .contact-mailto:is(:hover, :focus) {
+            color: var(--pressed-state);
+        }
+    }
+
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
     .page-heade-container {
@@ -253,40 +230,24 @@ button {
         margin-left: 76px;
     }
 
-.menu-link:hover,
-.menu-link:focus {
-    color: var(--pressed-state);
-}
-
 .address-list {
     margin-left: auto;
 }
 
-.contact:not(:last-child) {
-    margin-right: 40px;
+.menu-list {
+    display: flex;
 }
-
 .contact-mailto {
     display: block;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
 
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--text-color);
-    transition: color var(--transition-dur-and-func);
 }
-
-.contact-mailto:hover,
-.contact-mailto:focus {
-    color: var(--pressed-state);
+.contact:not(:last-child) {
+    margin-right: 40px;
 }
-
-    .contact-mailto:hover,
-    .contact-mailto:focus {
-        color: var(--pressed-state);
-    }
 }
 
 /* MOBILE-HEADER */
@@ -307,9 +268,10 @@ button {
     .mobile-open-bth {
         padding: 0;
         line-height: 0;
+        background-color: transparent;
         border: none;
         cursor: pointer;
-        background-color: transparent;
+        
     }
 
     .mobile-icon-open {
@@ -459,8 +421,24 @@ button {
     .mobile-social-link:focus {
         background-color: var(--pressed-state);
     }
-}
 
+        .contact-mailto {
+            display: block;
+            padding-top: 24px;
+            padding-bottom: 24px;
+    
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: var(--text-color);
+            transition: color var(--transition-dur-and-func);
+        }
+    
+        .contact-mailto:hover,
+        .contact-mailto:focus {
+            color: var(--pressed-state);
+        }
+}
 
 @media screen and (max-width: 427px) {
     .mobile-menu-link {
