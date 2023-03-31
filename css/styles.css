@@ -42,6 +42,11 @@ p {
 ul {
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
@@ -110,7 +115,6 @@ button {
 
 .page-heade {
     border-bottom: var(--text-footer);
-    text-align: center;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -119,20 +123,6 @@ button {
 .page-heade-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-@media screen and (max-width: 767px) {
-    .page-heade-container {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .page-heade-container {
-        display: flex;
-        justify-content: space-between;
-    }
 }
 
 .page-navigation,
@@ -146,18 +136,11 @@ button {
     align-items: center;
 }
 
-@media screen and (min-width: 1200px) {
-    .page-navigation {
-        margin-left: 76px;
-    }
 
     .address-list {
         margin-left: auto;
     }
 
-    .menu-list {
-        display: flex;
-    }
 
     .contact-mailto {
         display: block;
@@ -171,7 +154,6 @@ button {
     .contact:not(:last-child) {
         margin-right: 40px;
     }
-}
 
 .links {
     color: var(--modal-color);
@@ -202,7 +184,6 @@ button {
 
 .menu-list {
     display: flex;
-    align-items: center;
 }
 
 .menu-item:not(:last-child) {
@@ -210,6 +191,7 @@ button {
 }
 
 .menu-link {
+    position: relative;
     padding-top: 24px;
     padding-bottom: 24px;
     font-weight: 500;
@@ -240,6 +222,37 @@ button {
     border-radius: 2px; 
 }
 
+@media screen and (max-width: 767px) {
+    .page-heade-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-mailto {
+        display: block;
+        padding: 7px 0;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+
+        color: var(--text-color);
+        transition: color var(--transition-dur-and-func);
+    }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .page-heade-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-navigation {
+        margin-left: 76px;
+    }
+
 .menu-link:hover,
 .menu-link:focus {
     color: var(--pressed-state);
@@ -247,10 +260,6 @@ button {
 
 .address-list {
     margin-left: auto;
-}
-
-.menu-list {
-    display: flex;
 }
 
 .contact:not(:last-child) {
@@ -273,19 +282,6 @@ button {
 .contact-mailto:focus {
     color: var(--pressed-state);
 }
-
-@media screen and (min-width: 768px) {
-    .contact-mailto {
-        display: block;
-        padding: 7px 0;
-        font-style: normal;
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-
-        color: var(--text-color);
-        transition: color var(--transition-dur-and-func);
-    }
 
     .contact-mailto:hover,
     .contact-mailto:focus {
