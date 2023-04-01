@@ -158,13 +158,11 @@ button {
 
 .menu-link {
     position: relative;
-    padding-top: 24px;
+    padding: 28px 0;
     padding-bottom: 24px;
     font-weight: 500;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-decoration: none;
 
     color: var(--modal-color);
     transition: color var(--transition-dur-and-func);
@@ -175,22 +173,20 @@ button {
     color: var(--pressed-state);
 }
 
-.current {
-    position: relative;
+.menu-link.current {
     color: var(--pressed-state);
 }
 
-.current::after {
+.menu-link.current::after {
+    position: absolute;
     content: "";
-    display: block;
     width: 100%;
     height: 4px;
-
-    background-color: var(--pressed-state);
-    position: absolute;
     left: 0;
     bottom: 0;
     border-radius: 2px;
+
+    background-color: var(--pressed-state);
 }
 
 
@@ -213,7 +209,8 @@ button {
         transition: color var(--transition-dur-and-func);
     }
 
-    .contact-mailto:is(:hover, :focus) {
+    .contact-mailto:hover, 
+    .contact-mailto:focus {
         color: var(--pressed-state);
     }
 }
@@ -425,23 +422,6 @@ button {
         background-color: var(--pressed-state);
     }
 
-    .contact-mailto {
-        display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
-
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--text-color);
-        transition: color var(--transition-dur-and-func);
-    }
-
-    .contact-mailto:hover,
-    .contact-mailto:focus {
-        color: var(--pressed-state);
-    }
-}
 
 @media screen and (max-width: 427px) {
     .mobile-menu-link {
@@ -456,7 +436,7 @@ button {
 @media screen and (max-width: 384px) {
     .mobile-social-list {
         justify-content: space-between;
-        gap: 56px;
+        gap: initial;
     }
 }
 
@@ -473,38 +453,34 @@ button {
 /* HERO-LIST */
 
 .hero-list {
-    padding-top: 188px;
-    padding-bottom: 188px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 112px 0;
+    max-width: 428px;
     text-align: center;
     background-color: var(--modal-color);
 
-    max-width: 1440px;
-    min-height: 600px;
-    margin-right: auto;
-    margin-left: auto;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/header_offise.jpg);
+        url(../images/mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .main-button {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 496px;
-
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
+    margin: 0 auto;
+    max-width: 320px;
+    
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
+    text-transform: capitalize;
 
     color: var(--mains-color);
 }
 
 .modal-bth {
-    margin-top: 48px;
+    margin-top: 72px;
     padding: 16px 32px;
 
     font-family: "Roboto", sans-serif;
@@ -529,34 +505,13 @@ button {
     background-color: var(--pressed-state);
 }
 
-@media screen and (min-width: 428px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
 .hero-list {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 112px 0;
-        max-width: 428px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/dark_mobile.jpg);
-    }
-
-    .main-button {
-        margin: 0 auto;
-        max-width: 320px;
-
-        font-size: 36px;
-        line-height: 1.11;
-        letter-spacing: 0.02em;
-        text-transform: capitalize;
-
-        color: var(--mains-color);
-    }
-
-    .modal-bth {
-        margin-top: 72px;
-        padding: 16px 32px;
+            url(../images/mobile@2x.jpg);
     }
 }
 
@@ -565,7 +520,7 @@ button {
         max-width: 768px;
 
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/dark_tablet.jpg);
+            url(../images/tablet.jpg);
     }
 
     .main-button {
@@ -581,20 +536,38 @@ button {
     }
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero-list {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/tablet@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .hero-list {
         padding: 188px 0;
         max-width: 1440px;
 
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/header_offise.jpg);
+            url(../images/desktop.jpg);
     }
 
     .order-button {
         margin-top: 48px;
     }
 }
-
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+.hero-list {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/desktop@2x.jpg);
+    }
+}
 
 /* MAIN-BTH */
 
