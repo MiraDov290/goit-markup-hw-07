@@ -673,7 +673,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     }
 
     .emplo-our-item {
-        width: 396px;
+        width: calc((100% - var(--element-gap)) / 2);
     }
 
     .emplo-our {
@@ -691,7 +691,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     }
 
     .emplo-our-item {
-        width: 264px;
+        width: calc((100% - (var(--element-gap) * 3)) / 4);
     }
 
     .emplo-our-cart {
