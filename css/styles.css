@@ -35,7 +35,7 @@ h3,
 h4,
 h5,
 p {
-    margin-top: 0;
+    margin-top: 40px 0;
     margin-bottom: 0;
 }
 
@@ -333,7 +333,7 @@ button {
         border: 1px solid transparent;
     }
 
-    .mobile-close-icon {
+    .mobile-icon-close {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -372,7 +372,7 @@ button {
 
     .mobile-contact-phone {
         display: block;
-
+        margin-bottom: 40px;
         font-style: normal;
         font-weight: 700;
         font-size: 35px;
@@ -417,27 +417,12 @@ button {
         transition: background-color var(--transition-dur-and-func);
     }
 
-    .mobile-social-link:hover,
-    .mobile-social-link:focus {
+    .mobile-social-list-link:hover,
+    .mobile-social-list-link:focus {
         background-color: var(--pressed-state);
     }
 
-    .contact-mailto {
-        display: block;
-        padding-top: 24px;
-        padding-bottom: 24px;
-
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: var(--text-color);
-        transition: color var(--transition-dur-and-func);
-    }
-
-    .contact-mailto:hover,
-    .contact-mailto:focus {
-        color: var(--pressed-state);
-    }
+    
 }
 
 @media screen and (max-width: 427px) {
@@ -453,7 +438,7 @@ button {
 @media screen and (max-width: 384px) {
     .mobile-social-list {
         justify-content: space-between;
-        gap: 56px;
+        gap: initial;
     }
 }
 
@@ -672,6 +657,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 
 
 @media screen and (min-width: 768px) {
+    
     .our-list-text {
         flex-direction: row;
         flex-wrap: wrap;
@@ -758,12 +744,51 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 
 /* Our Team */
 
+.team-our-employee {
+    padding-top: 96px 0;
+    max-width: 100%;
+
+    background-color: var(--bth-color);
+}
+
 .our-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 72px;
-    gap: var(--element-gap);
+    column-gap: 24px;
+    row-gap: 72px;
 }
+
+.hero-our {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    color: var(--modal-color);
+}
+
+@media screen and (min-width: 768px) {
+    .our-list {
+        margin-top: 72px;
+        column-gap: 24px;
+        row-gap: 64px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .team-our-employee {
+        padding: 120px 0;
+    }
+}
+
+
+
+
+
 
 .our-images-going {
     width: 264px;
@@ -926,25 +951,6 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     padding-bottom: 120px;
 }
 
-
-
-.team-our-employee {
-    padding-top: 120px;
-    padding-bottom: 120px;
-    
-    background-color: var(--bth-color);
-}
-
-.hero-our {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-
-    color: var(--modal-color);
-}
 
 .emplo-our {
     font-weight: 500;
