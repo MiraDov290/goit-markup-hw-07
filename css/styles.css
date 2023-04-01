@@ -665,6 +665,12 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     color: var(--text-color);
 }
 
+.emlo-our-icon {
+    width: 64px;
+    height: 64px;
+}
+
+
 @media screen and (min-width: 768px) {
     .our-list-text {
         flex-direction: row;
