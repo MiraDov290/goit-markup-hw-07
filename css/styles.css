@@ -197,6 +197,7 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+    
     .contact-mailto {
         display: block;
         padding: 7px 0;
@@ -308,36 +309,6 @@ button {
         display: flex;
         flex-direction: column;
         padding: 80px 40px 40px 40px;
-    }
-
-    .mobile-close-btn {
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-
-        background-color: transparent;
-        border-radius: 50%;
-        border: 1px solid rgba(46, 47, 66, 0.1);
-        fill: var(--modal-color);
-
-        transition: fill var(--transition-dur-and-func), background-color var(--transition-dur-and-func), border var(--transition-dur-and-func);
-    }
-
-    .mobile-close-btn:hover,
-    .mobile-close-btn:focus {
-        fill: var(--mains-color);
-        background-color: var(--pressed-state);
-        border: 1px solid transparent;
-    }
-
-    .mobile-icon-close {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .mobile-page-nav {
@@ -557,7 +528,7 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
             url(../images/desktop.jpg);
     }
 
-    .order-button {
+    .modal-bth {
         margin-top: 48px;
     }
 }
@@ -618,7 +589,8 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 /* Competencies */
 
 .team-our {
-    padding-top: 96px 0;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .our-list-text {
@@ -632,7 +604,6 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 }
 
 .emplo-our {
-    margin-top: 8px;
     text-align: center;
     font-size: 36px;
     line-height: 1.11;
@@ -661,7 +632,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     .our-list-text {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 576px;
+        gap: calc(var(--element-gap) * 3) var(--element-gap);
     }
 
     .emplo-our-item {
@@ -785,11 +756,6 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     }
 }
 
-
-
-
-
-
 .our-images-going {
     width: 264px;
 
@@ -799,11 +765,19 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     border: 1px solid #e7e9fc;
 }
 
+.employees-card {
+    padding: 32px 16px;
+}
 
+.hero-person {
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 
-
-
-
+    color: rgba(46, 47, 66, 0.4);
+}
 
 .text-going {
     margin-top: 8px;
@@ -814,10 +788,36 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     color: var(--text-color);
 }
 
+.social-list {
+    list-style: none;
+}
 
+.social-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: var(--element-gap);
+}
 
-
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    transition: fill var(--transition-dur-and-func),
+        background-color var(--transition-dur-and-func);
+    border: var(--transition-dur-and-func);
+}
     
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--pressed-state);
+}
+
+
 
 
 
@@ -872,21 +872,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 
 
 
-        
-
-.employees-card {
-    padding: 32px 16px;
-}
-
-.hero-person {
-    text-align: center;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
     
-    color: rgba(46, 47, 66, 0.4);
-    }
 
 .emplo-person {
     text-align: center;
@@ -894,36 +880,9 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     margin-bottom: 8px;
 }
 
-.social-list {
-    list-style: none;
-}
-
-.social-list {
-    display: flex;
-    justify-content: center;
-    gap: var(--element-gap);
-}
-
-.social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--blue-color);
-    transition: fill var(--transition-dur-and-func), 
-                background-color var(--transition-dur-and-func);
-                border: var(--transition-dur-and-func);
-}
 
 .social-list-icon {
     fill: var(--bth-color);
-}
-
-.social-list-link:hover,
-.social-list-link:focus {
-    background-color: var(--pressed-state);
 }
 
 .media-list {
