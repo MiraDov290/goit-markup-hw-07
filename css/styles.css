@@ -151,6 +151,10 @@ button {
     display: flex;
 }
 
+.menu-list-addres {
+    display: flex;
+}
+
 .menu-item:not(:last-child) {
     margin-right: 40px;
 }
@@ -190,6 +194,7 @@ button {
 
 
 @media screen and (max-width: 767px) {
+    
     .page-heade-container {
         display: none;
     }
@@ -221,6 +226,7 @@ button {
         display: flex;
         justify-content: space-between;
     }
+
 }
 
 @media screen and (min-width: 1200px) {
