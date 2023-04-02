@@ -689,7 +689,8 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     row-gap: 72px;
 }
 
-.hero-our {
+.hero-person {
+    text-align: center;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -734,10 +735,11 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     line-height: 1.2;
     letter-spacing: 0.02em;
 
-    color: rgba(46, 47, 66, 0.4);
+    color: var(--modal-color);
 }
 
-.text-going {
+.emplo-person {
+    text-align: center;
     margin-top: 8px;
     font-size: 16px;
     line-height: 1.5;
@@ -873,6 +875,15 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     background-color: rgb(77, 90, 229, 0.5);
 }
 
+.emplo-our-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    
+    color: var(--modal-color);
+}
+
 .media-link:hover .overlay,
 .media-link:focus .overlay {
     transform: translateY(0);
@@ -881,7 +892,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 @media screen and (max-width: 767px) {
     .main-name-bth {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         row-gap: 8px;
         column-gap: 8px;
     }
@@ -938,6 +949,8 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
         width: 360px;
     }
 }
+
+
 
 /* Customers */
 
