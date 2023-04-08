@@ -213,7 +213,7 @@ button {
             display: flex;
         }
 
-        .contact:not(:last-child) {
+        .contact:not(:first-child) {
             margin-bottom: 6px;
         }
     
