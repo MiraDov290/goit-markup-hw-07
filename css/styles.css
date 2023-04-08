@@ -206,18 +206,17 @@ button {
             margin-left: 121px;
         }
     
-        .address-list {
-            margin-left: 6px;
-        }
-    
+    .address-list {
+        margin-left: 118px;
+    }
         .menu-list {
             display: flex;
         }
-    
-    
+
         .contact:not(:last-child) {
-            margin-right: 16px;
+            margin-bottom: 6px;
         }
+    
 
     .contact-mailto {
         display: block;
@@ -345,7 +344,7 @@ button {
              height: 24px;
              border-radius: 50%;
              cursor: pointer;
-             fill: var(--modal-window);
+             fill: var(--modal-icon);
              background-color: transparent;
              border: 1px solid rgba(0, 0, 0, 0.1);
              transition: border-color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
@@ -367,7 +366,7 @@ button {
 
 
     .mobile-page-nav {
-        margin-bottom: 284px;
+        margin-bottom: auto;
     }
 
     .mobile-menu-item:not(:first-child) {
@@ -680,6 +679,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     }
 
     .emplo-our {
+        margin-top: 6px;
         font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
@@ -782,6 +782,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 }
 
 .hero-person {
+    margin-top: 0;
     text-align: center;
     font-weight: 500;
     font-size: 20px;
@@ -1344,7 +1345,6 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     height: 24px;
     border-radius: 50%;
     cursor: pointer;
-    fill: var(--modal-window);
     background-color: transparent;
     background-color: var(--text-footer);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1353,16 +1353,22 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
 
 .modal-close-bth:hover,
 .modal-close-bth:focus {
-    fill: var(--mains-color);
     border: 1px solid transparent;
     background-color: var(--pressed-state);
 }
 
 .modal-icon {
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+    fill: var(--modal-icon);
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close-bth:hover .modal-icon,
+.modal-close-bth:focus .modal-icon {
+    fill: var(--modal-window);
 }
 
 /* MODAL FORM */
